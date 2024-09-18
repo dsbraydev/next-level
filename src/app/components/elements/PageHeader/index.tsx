@@ -4,7 +4,7 @@ interface IHeader {
 
 const PageHeader = ({ header }: IHeader) => {
   return (
-    <h2 className="text-2xl font-bold uppercase text-[#45d3ce] mb-5">
+    <h2 className="text-2xl font-bold uppercase text-[#d36f30] mb-5">
       {header}
     </h2>
   );

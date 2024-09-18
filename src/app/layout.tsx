@@ -6,8 +6,8 @@ import Sidebar from "./components/Sidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Upgrade Self",
-  description: "Upgrade Self",
+  title: "Next Level",
+  description: "Next Level",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <div className="grid" style={{ gridTemplateColumns: "15vw auto" }}>
+        <div className="grid grid-cols-[15vw_auto]">
           <Sidebar />
           <div className="p-5">{children}</div>
         </div>

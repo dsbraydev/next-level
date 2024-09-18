@@ -44,7 +44,7 @@ const Sidebar = () => {
         return (
           <Link key={i} href={link.href}>
             <Button
-              className={`w-full bg-[#0fd3cf] hover:opacity-70 hover:bg-[#0fd3cf] transition duration-300 text-black ${
+              className={`w-full bg-[#d36f30] hover:opacity-70 hover:bg-[#d36f30] transition duration-300 text-black ${
                 path === link.href ? "opacity-70" : ""
               }`}
             >

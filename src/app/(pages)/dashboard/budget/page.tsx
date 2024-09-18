@@ -1,7 +1,23 @@
+import { client } from "@/sanity/client";
 import Budget from "@/app/components/Budget";
 
-const BudgetPage = () => {
-  return <Budget />;
-};
+const options = { next: { revalidate: 60 } };
 
-export default BudgetPage;
+// Define the query as a plain string
+const FINANCES_QUERY = `*[
+  _type == "finances"
+][0]{
+  _id,
+  income,
+  tax,
+  expenses[]->{
+    name,
+    amount,
+    type
+  }
+}`;
+
+export default async function BudgetPage() {
+  const finances = await client.fetch(FINANCES_QUERY, {}, options);
+  return <Budget data={finances} />;
+}
